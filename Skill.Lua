@@ -25,7 +25,7 @@ local module = {
              i+= 1       
             end    
           end)	
-            --ah
+            
            spawn(function()
              wait(HowLongStun/10 + 0.4)  
              hum.AutoRotate = true  
