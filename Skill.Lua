@@ -1,6 +1,6 @@
 local module = {
     
-    
+    -- local
     CeroLocal = function(player,tool,CD,HowLongStun)
         
         local r1 = game.StarterPack.Cero.remotes.r1
