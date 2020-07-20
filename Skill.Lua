@@ -11,7 +11,6 @@ local module = {
         local deb = game:GetService("Debris")
         
         local ShouldStop = function()
-            local i = 1 
             local SpeedAndJump = {}
             SpeedAndJump[1] = hum.WalkSpeed
             SpeedAndJump[2] = hum.JumpPower  
