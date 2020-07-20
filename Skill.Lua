@@ -1,6 +1,5 @@
 local module = {
     
-    -- local
     CeroLocal = function(player,tool,CD,HowLongStun)
         
         local r1 = game.StarterPack.Cero.remotes.r1
@@ -54,10 +53,7 @@ local module = {
             end
           elseif CANFIRE() == false then return end		
         end)
-        
-        
-        
-        
+     
         
     end;
     
@@ -66,12 +62,7 @@ local module = {
         local r1 = game.StarterPack.Cero.remotes.r1
         local deb = game:GetService("Debris")
         local repstorage = game:GetService("ReplicatedStorage")
-        
-        
-        local animation = function()
-            
-        end
-        
+          
         
         local Audio = function(rootpart)      
           local Part = Instance.new('Part',workspace)
