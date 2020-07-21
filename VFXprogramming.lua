@@ -240,177 +240,177 @@ end;
 
 
 
---[[                                                         SUB MODULE                                       ]]--
+--[[                                           SUB MODULE                                       ]]--
 
 
 local module = {
-	SortFire = function(Part1,Part2,Part3,Part4,Part5,Part6,Part7,Part8,Part9,rootpart)
-		local debris=  game:GetService("Debris")
-		local TweenService = game:GetService("TweenService")
-		local fire = workspace.ScriptAssets.FirePart.Fire
-		local rock = workspace.ScriptAssets.Rock
-		local repstorage = game:GetService("ReplicatedStorage")
-		local RingToCopy = repstorage.ScriptAssets.FireStomp.Ring2
- 		local EffectsRange = -8
-		
-		local Rng1 = function(randomizer1)
-			if randomizer1 == 1 then
-			 return -20
-			else
-			 return 30		
-			end
-		end
-		
-		local ToSize = function(randomsize,rock2)
-			if randomsize == 1 then
-			 return rock2.size/2
-			else
-			 return rock2.size/2.5
-			end
-			
-		end
-		
-		local tweenrock = function(rock2)
-		  local tweeninfo = TweenInfo.new(0.7,Enum.EasingStyle.Bounce,Enum.EasingDirection.Out)
-		  local goals = {
-		  Size = rock2.Size*2
-		  }
-		  local goals2 = {
-		  Size = rock2.Size/3;		 
-		  Transparency = 1		
-		  }			
-		  local newtween = TweenService:Create(rock2,tweeninfo,goals)
-		  local newtween2 = TweenService:Create(rock2,tweeninfo,goals2)
-		  newtween:Play()
-			spawn(function()
-			 wait(2)	
-			 newtween2:Play()	
-			end)
-		end
-		
-		local function makerings()
-		  local tweeninfo2 = TweenInfo.new(1.2,Enum.EasingStyle.Linear,Enum.EasingDirection.Out)	
-		  local Ring = RingToCopy:Clone()	
-		  local Ring2 = RingToCopy:Clone()	
-	      local Ring3 = RingToCopy:Clone()
-		  Ring2.Size = Ring.Size/1.25
-		  Ring3.Size = Ring2.Size/1.5	
-		  local goals3 = {
-		  Size = Ring.Size*2;	
-		  Transparency = 1	
-		  }		
-		  local goals4 = {
-		  Size = Ring2.Size*2;	
-		  Transparency = 1	
-		  }			  
-		  local goals5 = {
-		  Size = Ring3.Size*2;	
-		  Transparency = 1	
-		  }			
-			
-			
-		 local newtween3 = TweenService:Create(Ring,tweeninfo2,goals3)
-		 local newtween4 = TweenService:Create(Ring2,tweeninfo2,goals4)
-		 local newtween5 = TweenService:Create(Ring3,tweeninfo2,goals5)
-		 Ring.Parent = workspace
-		 Ring.CFrame = rootpart.CFrame * CFrame.new(0,-3,0)		
-		 Ring2.Parent = workspace
-		 Ring2.CFrame = rootpart.CFrame * CFrame.new(0,-3,0)			
-		 Ring3.Parent = workspace
-	     Ring3.CFrame = rootpart.CFrame * CFrame.new(0,-3,0)				
-		 newtween3:Play()
-	     newtween4:Play()		         
-		 newtween5:Play()	     
-		 debris:AddItem(Ring, 3)
-		 debris:AddItem(Ring2, 3)
-		 debris:AddItem(Ring3, 3)	
-		 spawn(function()
-		  while wait() do 
-			 RingToCopy.Size = Vector3.new(19.1, 0.225, 16.55)
-			 RingToCopy.Transparency = 0.5
-			 end
-		  end)
-		end
-		
-		
-		
-		
-		
-	  local DrawRocks = function()
-		for i = 1,360 do
-				local NewRandomizer = function()
-				  local Random1 = math.random(1,2)
-				  local Random2 = Random1
-				  return Random2
-				end
-			local Random1 = Rng1(NewRandomizer())	
-			local randomsize = math.random(1,2)
-			local rock2 = rock:Clone()
-			rock2.Material = workspace.baseplate.Material
-			rock2.Color = workspace.baseplate.Color
-			rock2.Size = ToSize(randomsize,rock2)
-			rock2.Parent = workspace 
-			rock2.CFrame = rootpart.CFrame * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(i),math.rad(Random1)) * CFrame.new(0,-3,-4)
-			tweenrock(rock2)
-			i+= 10
-			debris:AddItem(rock2, 3)
-		end
-	 end
-		
-	   local Fix = function(v)
-		v.CanCollide = false
-		v.Anchored = true
-		debris:AddItem(v, 5)
-		v.Parent = workspace
-	   end
-		
-		local disappear = function(v)
-		 spawn(function()
-		   local tweeninf = TweenInfo.new(1,Enum.EasingStyle.Bounce,Enum.EasingDirection.Out) 	
-		   local gols = {Size = fire.Size; Heat = fire.Heat;}	
-		   local TrackTween = TweenService:Create(v.Fire,tweeninf,gols)	
-		   TrackTween:Play()	
-		   wait(2)
-		   v:Destroy()
-		 end)   	
-		end	
-		
-		makerings()
-		DrawRocks()
-		
-		
-		
-		Fix(Part1)
-		Part1.CFrame = rootpart.CFrame * CFrame.new(0,0,EffectsRange) * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(-30),math.rad(0))
-		Fix(Part2)
-		Part2.CFrame = rootpart.CFrame * CFrame.new(0,0,EffectsRange) * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(0),math.rad(0))
-		Fix(Part3)
-		Part3.CFrame = rootpart.CFrame * CFrame.new(0,0,EffectsRange) * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(30),math.rad(0))
-		Fix(Part4)
-		Part4.CFrame = Part1.CFrame * CFrame.new(0,0,-7)
-		Fix(Part5)
-		Part5.CFrame = Part2.CFrame * CFrame.new(0,0,-7)
-		Fix(Part6)
-		Part6.CFrame = Part3.CFrame * CFrame.new(0,0,-7)
-		Fix(Part7)
-		Part7.CFrame = Part4.CFrame * CFrame.new(0,0,-10)
-		Fix(Part8)
-		Part8.CFrame = Part5.CFrame * CFrame.new(0,0,-10)
-		Fix(Part9)
-		Part9.CFrame = Part6.CFrame * CFrame.new(0,0,-10)
-		wait(1)
-		disappear(Part1)
-		disappear(Part2)
-		disappear(Part3)
-		wait(0.4)
-		disappear(Part4)
-		disappear(Part5)
-		disappear(Part6)
-		wait(0.4)
-		disappear(Part7)
-		disappear(Part8)
-		disappear(Part9)
-	end
+    SortFire = function(Part1,Part2,Part3,Part4,Part5,Part6,Part7,Part8,Part9,rootpart)
+        local debris=  game:GetService("Debris")
+        local TweenService = game:GetService("TweenService")
+        local fire = workspace.ScriptAssets.FirePart.Fire
+        local rock = workspace.ScriptAssets.Rock
+        local repstorage = game:GetService("ReplicatedStorage")
+        local RingToCopy = repstorage.ScriptAssets.FireStomp.Ring2
+         local EffectsRange = -8
+        
+        local Rng1 = function(randomizer1)
+            if randomizer1 == 1 then
+             return -20
+            else
+             return 30		
+            end
+        end
+        
+        local ToSize = function(randomsize,rock2)
+            if randomsize == 1 then
+             return rock2.size/2
+            else
+             return rock2.size/2.5
+            end
+            
+        end
+        
+        local tweenrock = function(rock2)
+          local tweeninfo = TweenInfo.new(0.7,Enum.EasingStyle.Bounce,Enum.EasingDirection.Out)
+          local goals = {
+          Size = rock2.Size*2
+          }
+          local goals2 = {
+          Size = rock2.Size/3;		 
+          Transparency = 1		
+          }			
+          local newtween = TweenService:Create(rock2,tweeninfo,goals)
+          local newtween2 = TweenService:Create(rock2,tweeninfo,goals2)
+          newtween:Play()
+            spawn(function()
+             wait(2)	
+             newtween2:Play()	
+            end)
+        end
+        
+        local function makerings()
+          local tweeninfo2 = TweenInfo.new(1.2,Enum.EasingStyle.Linear,Enum.EasingDirection.Out)	
+          local Ring = RingToCopy:Clone()	
+          local Ring2 = RingToCopy:Clone()	
+          local Ring3 = RingToCopy:Clone()
+          Ring2.Size = Ring.Size/1.25
+          Ring3.Size = Ring2.Size/1.5	
+          local goals3 = {
+          Size = Ring.Size*2;	
+          Transparency = 1	
+          }		
+          local goals4 = {
+          Size = Ring2.Size*2;	
+          Transparency = 1	
+          }			  
+          local goals5 = {
+          Size = Ring3.Size*2;	
+          Transparency = 1	
+          }			
+            
+            
+         local newtween3 = TweenService:Create(Ring,tweeninfo2,goals3)
+         local newtween4 = TweenService:Create(Ring2,tweeninfo2,goals4)
+         local newtween5 = TweenService:Create(Ring3,tweeninfo2,goals5)
+         Ring.Parent = workspace
+         Ring.CFrame = rootpart.CFrame * CFrame.new(0,-3,0)		
+         Ring2.Parent = workspace
+         Ring2.CFrame = rootpart.CFrame * CFrame.new(0,-3,0)			
+         Ring3.Parent = workspace
+         Ring3.CFrame = rootpart.CFrame * CFrame.new(0,-3,0)				
+         newtween3:Play()
+         newtween4:Play()		         
+         newtween5:Play()	     
+         debris:AddItem(Ring, 3)
+         debris:AddItem(Ring2, 3)
+         debris:AddItem(Ring3, 3)	
+         spawn(function()
+          while wait() do 
+             RingToCopy.Size = Vector3.new(19.1, 0.225, 16.55)
+             RingToCopy.Transparency = 0.5
+             end
+          end)
+        end
+        
+        
+        
+        
+        
+      local DrawRocks = function()
+        for i = 1,360 do
+                local NewRandomizer = function()
+                  local Random1 = math.random(1,2)
+                  local Random2 = Random1
+                  return Random2
+                end
+            local Random1 = Rng1(NewRandomizer())	
+            local randomsize = math.random(1,2)
+            local rock2 = rock:Clone()
+            rock2.Material = workspace.baseplate.Material
+            rock2.Color = workspace.baseplate.Color
+            rock2.Size = ToSize(randomsize,rock2)
+            rock2.Parent = workspace 
+            rock2.CFrame = rootpart.CFrame * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(i),math.rad(Random1)) * CFrame.new(0,-3,-4)
+            tweenrock(rock2)
+            i+= 10
+            debris:AddItem(rock2, 3)
+        end
+     end
+        
+       local Fix = function(v)
+        v.CanCollide = false
+        v.Anchored = true
+        debris:AddItem(v, 5)
+        v.Parent = workspace
+       end
+        
+        local disappear = function(v)
+         spawn(function()
+           local tweeninf = TweenInfo.new(1,Enum.EasingStyle.Bounce,Enum.EasingDirection.Out) 	
+           local gols = {Size = fire.Size; Heat = fire.Heat;}	
+           local TrackTween = TweenService:Create(v.Fire,tweeninf,gols)	
+           TrackTween:Play()	
+           wait(2)
+           v:Destroy()
+         end)   	
+        end	
+        
+        makerings()
+        DrawRocks()
+        
+        
+        
+        Fix(Part1)
+        Part1.CFrame = rootpart.CFrame * CFrame.new(0,0,EffectsRange) * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(-30),math.rad(0))
+        Fix(Part2)
+        Part2.CFrame = rootpart.CFrame * CFrame.new(0,0,EffectsRange) * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(0),math.rad(0))
+        Fix(Part3)
+        Part3.CFrame = rootpart.CFrame * CFrame.new(0,0,EffectsRange) * CFrame.fromEulerAnglesXYZ(math.rad(0),math.rad(30),math.rad(0))
+        Fix(Part4)
+        Part4.CFrame = Part1.CFrame * CFrame.new(0,0,-7)
+        Fix(Part5)
+        Part5.CFrame = Part2.CFrame * CFrame.new(0,0,-7)
+        Fix(Part6)
+        Part6.CFrame = Part3.CFrame * CFrame.new(0,0,-7)
+        Fix(Part7)
+        Part7.CFrame = Part4.CFrame * CFrame.new(0,0,-10)
+        Fix(Part8)
+        Part8.CFrame = Part5.CFrame * CFrame.new(0,0,-10)
+        Fix(Part9)
+        Part9.CFrame = Part6.CFrame * CFrame.new(0,0,-10)
+        wait(1)
+        disappear(Part1)
+        disappear(Part2)
+        disappear(Part3)
+        wait(0.4)
+        disappear(Part4)
+        disappear(Part5)
+        disappear(Part6)
+        wait(0.4)
+        disappear(Part7)
+        disappear(Part8)
+        disappear(Part9)
+    end
 }
 
 return module
