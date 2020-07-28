@@ -82,11 +82,10 @@
          
 
 
-         -- Calling out 
          for i = 1,4 do 
-            Count+= 90 
              if Count ~= 270
                DoDash(keys[i],Count,UIS,debounce,tapped,time1,CD)
+               Count+= 90
              else 
                DoDash(keys[4],-90,UIS,debounce,tapped,time1,CD)
              end   
