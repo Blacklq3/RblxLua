@@ -2,6 +2,7 @@ local module = {
     
     CeroLocal = function(player,tool,CD,HowLongStun)
         
+        local public = {}
         local r1 = game.StarterPack.Cero.remotes.r1
         local mouse = player:GetMouse()
         local cancero = false
@@ -9,12 +10,12 @@ local module = {
         local hum = character:WaitForChild("Humanoid")
         local deb = game:GetService("Debris")
         
-        local ShouldStop = function()
+        function public.Stun()
             local SpeedAndJump = {}
             SpeedAndJump[1] = hum.WalkSpeed
             SpeedAndJump[2] = hum.JumpPower  
             
-          spawn(function()
+          local stun1 = coroutine.wrap(function()
             for i = 1,HowLongStun do
              wait(0.1) 
              hum.AutoRotate = false
@@ -24,15 +25,17 @@ local module = {
             end    
           end)	
             
-           spawn(function()
+           local stun2 = coroutine.wrap(function()
              wait(HowLongStun/10 + 0.4)  
              hum.AutoRotate = true  
              hum.WalkSpeed = SpeedAndJump[1]
              hum.JumpPower = SpeedAndJump[2]  
            end) 
+          stun1()
+          stun2()  
        end  
         
-        local CANFIRE = function()
+        function public.CANFIRE()
             if tool:IsDescendantOf(player.Character) then 
               return true
             else
@@ -42,16 +45,16 @@ local module = {
         
 
         mouse.Button1Down:Connect(function()
-          if CANFIRE() then	
+          if public.CANFIRE() then	
             if cancero ~= true then 
             cancero = true	
-            ShouldStop()
+            public.Stun()
             wait(0.3)	
             r1:InvokeServer(player,tool)	
             wait(CD)
             cancero = false	
             end
-          elseif CANFIRE() == false then return end		
+          elseif public.CANFIRE() == false then return end		
         end)
      
         
