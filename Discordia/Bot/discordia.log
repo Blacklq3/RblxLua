@@ -1,0 +1,134 @@
+2020-08-10 02:08:28 | [INFO]    | Discordia 2.8.3
+2020-08-10 02:08:28 | [INFO]    | Connecting to Discord...
+2020-08-10 02:08:29 | [ERROR]   | 401 - Unauthorized : GET https://discordapp.com/api/v7/users/@me
+2020-08-10 02:08:29 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2020-08-10 02:11:57 | [INFO]    | Discordia 2.8.3
+2020-08-10 02:11:57 | [INFO]    | Connecting to Discord...
+2020-08-10 02:11:57 | [ERROR]   | 401 - Unauthorized : GET https://discordapp.com/api/v7/users/@me
+2020-08-10 02:11:57 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2020-08-10 02:13:45 | [INFO]    | Discordia 2.8.3
+2020-08-10 02:13:45 | [INFO]    | Connecting to Discord...
+2020-08-10 02:13:46 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 02:13:46 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 02:13:46 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 02:13:46 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 02:13:46 | [INFO]    | Shard 0 : Received READY
+2020-08-10 02:23:15 | [INFO]    | Discordia 2.8.3
+2020-08-10 02:23:15 | [INFO]    | Connecting to Discord...
+2020-08-10 02:23:15 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 02:23:15 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 02:23:15 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 02:23:15 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 02:23:16 | [INFO]    | Shard 0 : Received READY
+2020-08-10 02:27:53 | [INFO]    | Discordia 2.8.3
+2020-08-10 02:27:53 | [INFO]    | Connecting to Discord...
+2020-08-10 02:27:54 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 02:27:54 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 02:27:54 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 02:27:54 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 02:27:54 | [INFO]    | Shard 0 : Received READY
+2020-08-10 15:45:23 | [INFO]    | Discordia 2.8.3
+2020-08-10 15:45:23 | [INFO]    | Connecting to Discord...
+2020-08-10 15:45:24 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 15:45:24 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 15:45:24 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 15:45:24 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 15:45:24 | [INFO]    | Shard 0 : Received READY
+2020-08-10 15:55:16 | [INFO]    | Discordia 2.8.3
+2020-08-10 15:55:16 | [INFO]    | Connecting to Discord...
+2020-08-10 15:55:16 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 15:55:16 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 15:55:16 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 15:55:16 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 15:55:17 | [INFO]    | Shard 0 : Received READY
+2020-08-10 16:19:09 | [INFO]    | Discordia 2.8.3
+2020-08-10 16:19:09 | [INFO]    | Connecting to Discord...
+2020-08-10 16:19:10 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 16:19:10 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 16:19:10 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 16:19:10 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 16:19:10 | [INFO]    | Shard 0 : Received READY
+2020-08-10 16:25:12 | [INFO]    | Discordia 2.8.3
+2020-08-10 16:25:12 | [INFO]    | Connecting to Discord...
+2020-08-10 16:25:12 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 16:25:12 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 16:25:12 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 16:25:12 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 16:25:12 | [INFO]    | Shard 0 : Received READY
+2020-08-10 16:30:12 | [INFO]    | Discordia 2.8.3
+2020-08-10 16:30:12 | [INFO]    | Connecting to Discord...
+2020-08-10 16:30:12 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 16:30:12 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 16:30:12 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 16:30:12 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 16:30:13 | [INFO]    | Shard 0 : Received READY
+2020-08-10 17:25:23 | [INFO]    | Discordia 2.8.3
+2020-08-10 17:25:23 | [INFO]    | Connecting to Discord...
+2020-08-10 17:25:23 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 17:25:23 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 17:25:23 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 17:25:23 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 17:25:24 | [INFO]    | Shard 0 : Received READY
+2020-08-10 17:58:51 | [INFO]    | Discordia 2.8.3
+2020-08-10 17:58:51 | [INFO]    | Connecting to Discord...
+2020-08-10 17:58:51 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 17:58:51 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 17:58:51 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 17:58:51 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 17:58:52 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:01:13 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:01:13 | [INFO]    | Connecting to Discord...
+2020-08-10 18:01:13 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:01:13 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:01:13 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:01:13 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:01:13 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:01:50 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:01:50 | [INFO]    | Connecting to Discord...
+2020-08-10 18:01:51 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:01:51 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:01:51 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:01:51 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:01:51 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:04:36 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:04:36 | [INFO]    | Connecting to Discord...
+2020-08-10 18:04:36 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:04:36 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:04:37 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:04:37 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:04:37 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:06:00 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:06:00 | [INFO]    | Connecting to Discord...
+2020-08-10 18:06:00 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:06:00 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:06:00 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:06:00 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:06:00 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:09:34 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:09:34 | [INFO]    | Connecting to Discord...
+2020-08-10 18:09:35 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:09:35 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:09:35 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:09:35 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:09:35 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:17:07 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:17:07 | [INFO]    | Connecting to Discord...
+2020-08-10 18:17:08 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:17:08 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:17:08 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:17:08 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:17:08 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:46:30 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:46:30 | [INFO]    | Connecting to Discord...
+2020-08-10 18:46:30 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:46:31 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:46:32 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:46:32 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:46:32 | [INFO]    | Shard 0 : Received READY
+2020-08-10 18:47:08 | [INFO]    | Discordia 2.8.3
+2020-08-10 18:47:08 | [INFO]    | Connecting to Discord...
+2020-08-10 18:47:09 | [INFO]    | Authenticated as 'B'#7189
+2020-08-10 18:47:09 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-08-10 18:47:09 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-08-10 18:47:09 | [INFO]    | Shard 0 : Received HELLO
+2020-08-10 18:47:09 | [INFO]    | Shard 0 : Received READY
